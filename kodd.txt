@@ -1,0 +1,23 @@
+procedure TForm10.Button1Click(Sender: TObject);
+var
+METIN_1, METIN_2 : String;
+begin
+memo1.Lines.Clear;
+METIN_1 := 'Temel';
+METIN_2 := 'Programlama';
+memo1.Lines.Add(Format('İşaretli Tamsayı --> %d',[-123]));
+memo1.Lines.Add(Format('İşaretli Tamsayı --> %10d',[-123]));
+memo1.Lines.Add(Format('İşaretli Tamsayı --> %5d',[-123]));
+memo1.Lines.Add(Format('İşaretli Tamsayı --> %20.5d',[-123]));
+memo1.Lines.Add('--------------------------');
+memo1.Lines.Add(Format('İşaretsiz Tamsayı --> %u',[123]));
+memo1.Lines.Add('--------------------------');
+memo1.Lines.Add(Format('Heksadesimal Sayı --> %x',[15]));
+memo1.Lines.Add(Format('Heksadesimal Sayı --> %x',[16]));
+memo1.Lines.Add('--------------------------');
+memo1.Lines.Add(Format('METIN_1 için ayrılan bellek adresi --> %p',[Addr(METIN_1)]));
+memo1.Lines.Add(Format('METIN_2 için ayrılan bellek adresi --> %p',[Addr(METIN_2)]));
+memo1.Lines.Add('--------------------------');
+memo1.Lines.Add(Format('Formatlı String --> %s%s',[METIN_1,METIN_2]));
+memo1.Lines.Add(Format('Formatlı String --> %s%s',[METIN_1,METIN_2]));
+memo1.Lines.Add(Format('Formatlı String --> %-10s%s',[METIN_1,METIN_2]));
